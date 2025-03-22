@@ -203,3 +203,12 @@ INSERT INTO Payment (PaymentID, CourierID, LocationID, Amount, PaymentDate) VALU
 (100033, 33, 12, 310.00, '2025-03-07'),
 (100034, 34, 13, 280.00, '2025-03-26'),
 (100035, 35, 13, 250.00, '2025-03-09');
+
+
+--Rough Relationship 
+	
+--	User and Courier	 - One to many
+--	Location and payment - One to many
+--	Employee and Courier - One to many
+--	Courier and payement - One to one
+	
