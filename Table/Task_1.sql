@@ -129,3 +129,77 @@ INSERT INTO Courier (CourierID, SenderName, SenderAddress, ReceiverName, Receive
 (33, 'Anjali Patel', 'Flat 2B, Sagar Apartments, Linking Road, Mumbai, Maharashtra, India, 400050', 'Sophie Dupont', '12 Rue de Rivoli, Paris, France, 75001', 5.90, 'Delivered', 'TRK1266', '2025-03-07'),
 (34, 'Emily Davis', '456 Broadway St, New York, NY, USA, 10013', 'Ava Lewis', '1001 Colorado Blvd, Denver, CO, USA, 80206', 3.60, 'Pending', 'TRK1267', '2025-03-26'),
 (35, 'John Smith', '742 Evergreen Terrace, Los Angeles, CA, USA, 90001', 'Mia Johansson', 'Sveavägen 45, Stockholm, Sweden, 11134', 6.80, 'Delivered', 'TRK1268', '2025-03-09');
+
+INSERT INTO CourierServices (ServiceID, ServiceName, Cost) VALUES
+(1, 'Express Delivery', 150.00),
+(2, 'International Shipping', 300.00),
+(3, 'Standard Shipping', 50.00),
+(4, 'Deluxe Shipping', 200.00),
+(5, 'Economy Shipping', 40.00),
+(6, 'Fragile Goods', 220.00);
+
+
+INSERT INTO Employee (EmployeeID, Name, Email, ContactNumber, Role, Salary) VALUES
+(1001, 'Anita Khan', 'anita.kapoor@reddart.com', '9876543210', 'Customer Relationship', 45000.00),
+(1002, 'Ravi Verma', 'ravi.verma@reddart.com', '9876543211', 'Customer Relationship', 46000.00),
+(1003, 'Priya Mehta', 'priya.mehta@reddart.com', '9876543212', 'Customer Relationship', 47000.00),
+(1004, 'Calvin Mathews', 'calvin.mathews@reddart.com', '2025550189', 'IT Admin', 60000.00),
+(1005, 'James Smith', 'james.smith@reddart.com', '2025550190', 'Manager', 70000.00);
+
+
+INSERT INTO Location (LocationID, LocationName, Address) VALUES
+(1, 'India Main Warehouse', 'Bangalore, Karnataka, India, 560001'),
+(2, 'USA Main Warehouse', '742 Evergreen Terrace, Los Angeles, CA, USA, 90001'),
+(3, 'Italy Main Warehouse', 'Piazza del Duomo 1, Milan, Italy, 20122'),
+(4, 'Germany Main Warehouse', 'Marienplatz 8, Munich, Germany, 80331'),
+(5, 'France Main Warehouse', '12 Rue de Rivoli, Paris, France, 75001'),
+(6, 'Sweden Main Warehouse', 'Sveavägen 45, Stockholm, Sweden, 11134'),
+(7, 'UK Main Warehouse', '221B Baker Street, London, UK, NW1 6XE'),
+(8, 'Saudi Arabia Main Warehouse', 'King Fahd Road, Riyadh, Saudi Arabia, 11421'),
+(9, 'UAE Main Warehouse', 'Sheikh Zayed Road, Dubai, UAE, 00001'),
+(10, 'Canada Main Warehouse', '123 Queen Street West, Toronto, ON, Canada, M5H 2M9'),
+(11, 'Australia Main Warehouse', '123 Darling Harbour, Sydney, NSW, Australia, 2000'),
+(12, 'Spain Main Warehouse', 'Calle Gran Vía 28, Madrid, Spain, 28013'),
+(13, 'Japan Main Warehouse', 'Shibuya 2-21-1, Tokyo, Japan, 150-0002'),
+(14, 'Brazil Main Warehouse', 'Avenida Paulista 1234, São Paulo, SP, Brazil, 01310-100'),
+(15, 'South Africa Main Warehouse', '23 Nelson Mandela Blvd, Cape Town, South Africa, 8001');
+
+
+
+
+INSERT INTO Payment (PaymentID, CourierID, LocationID, Amount, PaymentDate) VALUES
+(100001, 1, 1, 200.00, '2025-03-20'),
+(100002, 2, 1, 150.00, '2025-03-18'),
+(100003, 3, 1, 180.00, '2025-03-25'),
+(100004, 4, 2, 220.00, '2025-03-22'),
+(100005, 5, 1, 210.00, '2025-03-15'),
+(100006, 6, 3, 280.00, '2025-04-01'),
+(100007, 7, 4, 170.00, '2025-03-17'),
+(100008, 8, 5, 250.00, '2025-03-19'),
+(100009, 9, 2, 200.00, '2025-03-20'),
+(100010, 10, 2, 190.00, '2025-03-30'),
+(100011, 11, 3, 210.00, '2025-03-10'),
+(100012, 12, 3, 230.00, '2025-04-03'),
+(100013, 13, 3, 220.00, '2025-03-14'),
+(100014, 14, 4, 160.00, '2025-03-23'),
+(100015, 15, 5, 250.00, '2025-03-28'),
+(100016, 16, 5, 230.00, '2025-03-21'),
+(100017, 17, 6, 270.00, '2025-03-13'),
+(100018, 18, 6, 220.00, '2025-04-02'),
+(100019, 19, 7, 240.00, '2025-03-18'),
+(100020, 20, 7, 250.00, '2025-03-27'),
+(100021, 21, 8, 300.00, '2025-04-05'),
+(100022, 22, 8, 280.00, '2025-03-29'),
+(100023, 23, 8, 270.00, '2025-03-16'),
+(100024, 24, 9, 320.00, '2025-03-19'),
+(100025, 25, 9, 290.00, '2025-03-24'),
+(100026, 26, 9, 230.00, '2025-03-22'),
+(100027, 27, 10, 350.00, '2025-03-12'),
+(100028, 28, 10, 310.00, '2025-03-11'),
+(100029, 29, 10, 280.00, '2025-03-06'),
+(100030, 30, 11, 330.00, '2025-04-04'),
+(100031, 31, 11, 320.00, '2025-03-10'),
+(100032, 32, 12, 340.00, '2025-04-06'),
+(100033, 33, 12, 310.00, '2025-03-07'),
+(100034, 34, 13, 280.00, '2025-03-26'),
+(100035, 35, 13, 250.00, '2025-03-09');
