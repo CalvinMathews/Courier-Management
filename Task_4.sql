@@ -1,5 +1,5 @@
 --Task 4: Inner Join,Full Outer Join, Cross Join, Left Outer Join,Right Outer Join
-
+use CourierServiceSystem
 
 
 --23. Retrieve Payments with Courier Information
@@ -49,10 +49,9 @@
 
 --34. Retrieve a list of all couriers and their corresponding services, including cases where there are no matches on either side
 	
+	SELECT * FROM Courier LEFT JOIN CourierServices ON CourierServices.ServiceID = Courier.ServiceID
 
-
---35. Retrieve a list of all employees and their corresponding payments, including cases where there are
---no matches on either side
+--35. Retrieve a list of all employees and their corresponding payments, including cases where there are no matches on either side
 
 	SELECT EmployeeID, NAME, Salary FROM Employee
 
@@ -130,6 +129,8 @@
 
 --53. Find the locations where the maximum payment amount was made
 	
-	SELECT l.* FROM Location l JOIN ( SELECT LocationID, MAX(Amount) AS MaxPayment FROM Payment_Details GROUP BY LocationID) p ON l.Location_ID = p.LocationID WHERE p.MaxPayment = (SELECT MAX(Amount) FROM Payment_Details)
+	SELECT l.* FROM Location l JOIN ( SELECT LocationID, MAX(Amount) AS MaxPayment FROM Payment GROUP BY LocationID) p ON l.LocationID = p.LocationID WHERE p.MaxPayment = (SELECT MAX(Amount) FROM Payment)
 	
---54. Find all couriers whose weight is greater than the weight of all couriers sent by a specific sender(e.g., 'SenderName'):	SELECT * FROM Courier WHERE Weight > (SELECT MAX(c2.Weight) FROM Courier c1 JOIN Courier c2 ON c1.SenderName = c2.SenderName WHERE c1.SenderName = 'Rajesh Kumar')
+--54. Find all couriers whose weight is greater than the weight of all couriers sent by a specific sender(e.g., 'SenderName'):
+
+	SELECT * FROM Courier WHERE Weight > (SELECT MAX(c2.Weight) FROM Courier c1 JOIN Courier c2 ON c1.SenderName = c2.SenderName WHERE c1.SenderName = 'Rajesh Kumar')
